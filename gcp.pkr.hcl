@@ -38,7 +38,7 @@ variable "source_image_family" {
 }
 
 variable "suffix" {
-  type    = string
+  type        = string
   description = "A suffix to add to image names to ensure each version is unique. For example a timestamp or version number."
 }
 
@@ -82,6 +82,7 @@ build {
       "shared/scripts/apt-install-docker.sh",
       "shared/scripts/gvisor.sh",
       "shared/scripts/apt-install-jq.sh",
+      "gcp/scripts/gcloud.sh",
     ]
 
     env = {
